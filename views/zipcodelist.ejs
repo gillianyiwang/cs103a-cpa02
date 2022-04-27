@@ -1,0 +1,23 @@
+<h1> Search Results</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr><td>County/City</td><td>District/City/Township</td><td>3-Digit Zip Code</td></tr>
+    </thead>
+    <tbody>
+        <% for (zipcode of zipcodes) {   
+            %>
+          <tr>
+              <td> <%= zipcode['county'] %> </td>
+              <td> <%= zipcode['dist'] %> </td>
+              <td> <%= zipcode['zip'] %> </td>
+          </tr>
+        <% } %>
+    </tbody>
+</table>
+               
+<pre>
+    <!-- 
+        <%= JSON.stringify(zipcodes,null,3) %> 
+    -->
+</pre>

@@ -1,0 +1,33 @@
+
+
+    <div class="jumbotron">
+        <h1>CPA02: Taiwan Zip Code Searcher </h1>
+        <p></p>
+    </div>
+
+    
+    <% if (true || loggedIn) {%>  
+        <form method="post" action="/zipcodes/byCounty">
+            Show Results by County/City:
+              <input type="text" name="county" 
+                     placeholder="e.g. Tainan or 台南">
+            <input type="submit">
+        </form>
+        <hr>
+        <form method="post" action="/zipcodes/byDist">
+            Show Results by District/City/Township: 
+            <input type="text" name="dist" 
+                   placeholder="e.g. Tamsui or 淡水">
+            <input type="submit">
+        </form>
+        <hr>
+        <form method="post" action="/zipcodes/byZip">
+            Show Results by Zip Code: 
+            <input type="text" name="zip" 
+                   placeholder="e.g. 970 (3-digit)">
+            <input type="submit">
+        </form>
+        <hr>
+    <% } %>
+
+
