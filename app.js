@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser"); // to handle cookies
 const session = require("express-session"); // to handle sessions using cookies
 const debug = require("debug")("personalapp:server"); 
 const layouts = require("express-ejs-layouts");
-const axios = require("axios")
+const axios = require("axios");
 
 // *********************************************************** //
 //  Loading models
@@ -32,7 +32,7 @@ const zipcodes = require('./public/data/Taiwan_Zip.json')
 
 const mongoose = require( 'mongoose' );
 //const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
-const mongodb_URI = 'mongodb+srv://gillian:stqQBdnIrkTO0cKE@database0.5mrja.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const mongodb_URI = process.env.MONGODB_URI;
 
 
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
@@ -198,7 +198,7 @@ app.use(function(err, req, res, next) {
 //  Starting up the server!
 // *********************************************************** //
 //Here we set the port to use between 1024 and 65535  (2^16-1)
-const port = "2000";
+const port = process.env.PORT || "2000";
 app.set("port", port);
 
 // and now we startup the server listening on that port
