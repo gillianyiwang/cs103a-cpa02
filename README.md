@@ -1,6 +1,6 @@
 # CPA02 - Taiwan Zip Code Searcher
 
-## Intro
+## About
 Taiwan Zip Code Searcher is a Node.js website deployed on Heroku that provides visitors to search zip codes in Taiwan based on keywords with data stored in a cloud-based MongoDB database.
 
 Heroku Web Page: https://taiwan-zip-code-searcher.herokuapp.com
