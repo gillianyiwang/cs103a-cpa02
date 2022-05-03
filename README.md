@@ -10,8 +10,7 @@ Video (Please sign in using a Brandeis google account to watch the video): https
 
 
 ## Note
-To run the projecy locally, please first donwload nodejs and npm or nodemon.
-Then, in **app.js**, change
+To run the project locally, please first donwload nodejs and npm or nodemon. Then, in **app.js**, change
 
 ``` bash
 const uri = process.env.MONGODB_URI;
