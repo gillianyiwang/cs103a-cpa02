@@ -31,11 +31,11 @@ const zipcodes = require('./public/data/Taiwan_Zip.json')
 // *********************************************************** //
 
 const mongoose = require( 'mongoose' );
-//const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
-const mongodb_URI = process.env.MONGODB_URI;
+//const uri = 'mongodb://localhost:27017/cs103a_todo'
+const uri = process.env.MONGODB_URI;
 
 
-mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+mongoose.connect( uri, { useNewUrlParser: true, useUnifiedTopology: true } );
 // fix deprecation warnings
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
